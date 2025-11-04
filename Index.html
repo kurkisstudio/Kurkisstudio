@@ -315,11 +315,6 @@
             .games-grid, .engines-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .image-3d-container {
-                width: 250px;
-                height: 250px;
-            }
         }
 
         /* Мобильное меню */
@@ -460,13 +455,6 @@
     <section class="hero">
         <h1>KURKIS STUDIO</h1>
         <p>делаю игры в одиночку.</p>
-        
-        <!-- 3D изображение -->
-        <div class="image-3d-container">
-            <div class="image-3d" id="rotatingImage">
-                <img src="" alt="KURKIS STUDIO">
-            </div>
-        </div>
     </section>
 
     <!-- Игры -->
@@ -597,32 +585,6 @@
                     });
                 }
             });
-        });
-
-        // 3D эффект для изображения
-        const rotatingImage = document.getElementById('rotatingImage');
-        
-        rotatingImage.addEventListener('mousemove', (e) => {
-            const rect = rotatingImage.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateY = (x - centerX) / 10;
-            const rotateX = (centerY - y) / 10;
-            
-            rotatingImage.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
-        });
-        
-        rotatingImage.addEventListener('mouseleave', () => {
-            rotatingImage.style.transform = 'rotateY(0deg) rotateX(0deg)';
-            rotatingImage.style.transition = 'transform 0.5s ease';
-        });
-        
-        rotatingImage.addEventListener('mouseenter', () => {
-            rotatingImage.style.transition = 'transform 0.1s ease';
         });
 
         // Модальное окно для загрузки
