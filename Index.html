@@ -202,18 +202,6 @@
             box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
         }
 
-        .soon-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #666;
-            color: #ccc;
-            text-decoration: none;
-            border-radius: 5px;
-            border: none;
-            cursor: not-allowed;
-            font-size: 0.9rem;
-        }
-
         /* Телеграмм канал */
         .telegram-section {
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
@@ -423,13 +411,6 @@
         .modal-btn.cancel:hover {
             background: #777;
         }
-
-        /* Стиль для текста "Soon..." */
-        .soon-text {
-            color: #888;
-            font-style: italic;
-            margin-top: 10px;
-        }
     </style>
 </head>
 <body>
@@ -476,13 +457,12 @@
             <!-- Симулятор домофона Winter Edition -->
             <div class="game-card">
                 <div class="game-image">
-                    <img src="https://i-mg24.ru/images/110425171509-zmt7i.png" alt="Симулятор домофона Winter Edition">
+                    <img src="https://i-mg24.ru/images/110825233304-bf9p1.png" alt="Симулятор домофона Winter Edition">
                 </div>
                 <div class="game-content">
                     <h3 class="game-title">Симулятор домофона Winter Edition</h3>
                     <p class="game-description">Обновленная версия игры Симулятор домофона но в ней больше механик и плюшек!</p>
-                    <button class="soon-btn">Скачать Игру</button>
-                    <p class="soon-text">Soon...</p>
+                    <button class="download-btn" data-game="Симулятор домофона Winter Edition" data-file="simulator_domofona_winter">Скачать Игру</button>
                 </div>
             </div>
 
@@ -599,6 +579,7 @@
         // Ссылки на Google Drive
         const driveLinks = {
             'simulator_domofona_1': 'https://drive.google.com/uc?export=download&id=1h6ba71qIVAsHBRRYM-_uMw9GtkNXBFN3',
+            'simulator_domofona_winter': 'https://drive.google.com/uc?export=download&id=1OP4Ovi73gT1dThY13ntHqSbMk85VxRFh',
             'alice_doorway': 'https://drive.google.com/uc?export=download&id=1dutgseD1UzyI8vYEWYyDgljAO6BnCsco',
             'alice_horrible_escape': 'https://drive.google.com/uc?export=download&id=1QtJdZ4eH-UyraAO-FTPV3FKqkZws609e'
         };
@@ -643,11 +624,6 @@
                 modal.style.display = 'none';
                 currentDownload = null;
             }
-        });
-
-        // Обработка кнопки "Soon..." для Winter Edition
-        document.querySelector('.soon-btn').addEventListener('click', function() {
-            alert('Симулятор домофона Winter Edition скоро будет доступен для скачивания!');
         });
     </script>
 </body>
