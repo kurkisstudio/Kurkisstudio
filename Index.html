@@ -331,7 +331,7 @@
             font-size: 1rem;
         }
 
-        .download-btn, .soon-btn {
+        .download-btn {
             display: inline-block;
             padding: 12px 25px;
             border-radius: 5px;
@@ -343,9 +343,6 @@
             font-size: 1rem;
             position: relative;
             overflow: hidden;
-        }
-
-        .download-btn {
             background: var(--primary);
             color: var(--secondary);
         }
@@ -354,18 +351,6 @@
             background: var(--accent);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-        }
-
-        .soon-btn {
-            background: var(--accent);
-            color: var(--primary);
-            cursor: not-allowed;
-        }
-
-        .soon-text {
-            color: var(--accent);
-            font-style: italic;
-            margin-top: 10px;
         }
 
         /* Telegram Section */
@@ -761,19 +746,6 @@
                     <button class="download-btn" data-game="Alice The Horrible Escape" data-file="alice_horrible_escape">Скачать Игру</button>
                 </div>
             </div>
-
-            <!-- Побег из магнита -->
-            <div class="game-card fade-in">
-                <div class="game-image">
-                    <img src="https://avatars.mds.yandex.net/i?id=b5b1e6cf1c7ddabd25b031b09042d520d179ecdd-5665039-images-thumbs&n=13" alt="Побег из магнита">
-                </div>
-                <div class="game-content">
-                    <h3 class="game-title">Побег из магнита</h3>
-                    <p class="game-description">Сможешь ли ты сбежать из самого загадочного магазина?</p>
-                    <button class="soon-btn">Скачать Игру</button>
-                    <p class="soon-text">Soon...</p>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -977,13 +949,6 @@
                 setTimeout(() => {
                     modal.classList.add('active');
                 }, 10);
-            });
-        });
-        
-        // Soon buttons functionality
-        document.querySelectorAll('.soon-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                alert('Игра скоро будет доступна для скачивания!');
             });
         });
         
